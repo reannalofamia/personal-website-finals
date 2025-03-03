@@ -1,0 +1,411 @@
+/* General Variables */
+:root {
+    --primary-color: #000000;
+    --secondary-color: #ffffff;
+    --accent-color: #0e0e0e;
+    --light-color: #ffffff;
+    --font-family: 'Segoe UI';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%; 
+  height: 100%;
+  scroll-behavior: smooth;
+
+}
+
+/* Fonts */
+@font-face {
+    font-family: 'Recoleta Alt Black';
+    src: url('fonts/Recoleta Alt Black.otf') format('opentype');
+    font-weight: 900; /* Adjust weight accordingly */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Recoleta Alt Semibold';
+    src: url('fonts/Recoleta Alt SemiBold.otf') format('opentype');
+    font-weight: 600; /* Adjust weight accordingly */
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueMedium';
+  src: url('fonts/HelveticaNeueMedium.otf') format('opentype');
+  font-weight: 600; /* Adjust weight accordingly */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueHeavy';
+  src: url('fonts/HelveticaNeueHeavy.otf') format('opentype');
+  font-weight: 600; /* Adjust weight accordingly */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueBold';
+  src: url('fonts/HelveticaNeueBold.otf') format('opentype');
+  font-weight: 600; /* Adjust weight accordingly */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueRoman';
+  src: url('fonts/HelveticaNeueRoman.otf') format('opentype');
+  font-weight: 600; /* Adjust weight accordingly */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'HelveticaNeueLight';
+  src: url('fonts/HelveticaNeueLight.otf') format('opentype');
+  font-weight: 600; /* Adjust weight accordingly */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Miller_Display_Bold';
+  src: url('fonts/fonnts.com-Miller_Display_Bold.otf') format('opentype');
+  font-weight: 600; /* Adjust weight accordingly */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Miller_Display_Roman';
+  src: url('fonts/fonnts.com-Miller_Display_Roman.otf') format('opentype');
+  font-weight: 600; /* Adjust weight accordingly */
+  font-style: normal;
+}
+
+
+
+/* General Styles */
+body {
+    margin: 0;
+    font-family: var(--font-family);
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+/* Navigation Bar ✅ */ 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--light-color);
+  padding: 0.5rem 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+/* Navigation Links */
+.nav-left, .nav-right {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+.nav-left a, .nav-right a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 400;
+  padding: 5px 10px;
+  font-family: HelveticaNeueLight; /* Default font */
+  transition: font-weight 0.3s, color 0.3s, font-family 0.3s;
+}
+
+/* Hover Effect (Bold + Color Change + Font Change) */
+.nav-left a:hover, .nav-right a:hover {
+  font-weight: bold;
+  color: var(--hover-color);
+  font-family: 'HelveticaNeueMedium'; /* Change font on hover */
+  text-decoration: none;
+}
+
+/* Centered Title */
+.navbar h1 {
+  font-size: 22px;
+  font-family: 'Recoleta Alt SemiBold', sans-serif;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.navbar li {
+  font-family: HelveticaNeueLight;
+}
+
+/* 3-Line Menu Button */
+.menu-button {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.menu-button .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: background-color 0.3s;
+}
+
+.menu-button:hover .bar {
+  background-color: var(--hover-color);
+}
+
+
+/* Mobile Menu (Hidden by Default) */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 5%;
+  background-color: var(--light-color);
+  width: 200px;
+  list-style: none;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+/* Mobile Menu Links */
+.mobile-menu li {
+  padding: 10px 0;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-family: 'HelveticaNeueLight'; /* Regular font */
+  transition: color 0.3s, font-family 0.3s;
+}
+
+.mobile-menu a:hover {
+  color: var(--hover-color);
+  font-family: 'HelveticaNeueMedium'; /* Hover font */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-left, .nav-right {
+      display: none;
+  }
+
+  .menu-button {
+      display: flex;
+  }
+}
+
+/* Reign Section ✅ */
+.intro-section {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+  background-color: rgb(255, 255, 255);
+}
+
+/* Container for both image & text */
+.columns-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  width: 90%;
+  gap: 40px;
+}
+
+/* Image section */
+.column-right-illustration {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.reign-image {
+  width: 100%;
+  max-width: 450px;
+  object-fit: cover;
+}
+
+/* Text section */
+.column-left-text {
+  flex: 1;
+  text-align: left;
+  line-height: 1.5;
+  font-size: 25px;
+  color: var(--primary-color);
+}
+
+.column-left-text a {
+  font-family: 'HelveticaNeueMedium'; /* Bold font applied */
+  transition: color 0.3s; /* Smooth hover effect */
+}
+
+.column-left-text a:hover {
+  color: rgb(151, 0, 0); /* Change color on hover */
+}
+
+.column-left-text h1 {
+  font-family: 'Recoleta Alt SemiBold', sans-serif; 
+  font-size: 35px;
+}
+
+.column-left-text p {
+  font-family: 'HelveticaNeueLight';
+  font-size: 20px;
+}
+
+.highlight {
+  background-color: black;
+  color: white;
+  padding: 2px 5px;
+}
+
+
+/* Link styles */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .columns-content {
+      flex-direction: column;
+      text-align: center;
+      gap: 20px;
+  }
+
+  .column-left-text {
+      font-size: 18px;
+  }
+
+  .column-left-text h1 {
+      font-size: 24px;
+  }
+
+  .reign-image {
+      max-width: 300px;
+  }
+}
+
+/* Hero Section */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+  /* background-color: #111; */
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-family: 'HelveticaNeueRoman';
+
+}
+
+.icon img {
+  width: 80px;
+  height: 80px;
+  max-width: 100%;
+  max-height: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.intro-text {
+  font-size: 1.1rem;
+  max-width: 600px;
+  transform: scale(1.02);
+}
+
+.hero-section {
+transition: transform 0.3s ease-in-out;
+}
+
+.hero-section:hover {
+  transform: scale(1.02);
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon img {
+  width: 80px;
+  height: 80px;
+  max-width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+
+.responsive-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.responsive-container img {
+  width: 80%;
+  max-width: 500px; /* Adjust max size */
+  height: auto;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .icon img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .responsive-container img {
+    width: 70%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .icon img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .responsive-container img {
+    width: 60%;
+    max-width: 250px;
+  }
+}
+
+
+
+
+
+
+
