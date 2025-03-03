@@ -10,6 +10,8 @@ import Resources from './components/Resources.vue';
 
 // Import global CSS
 import './assets/styles.css';
+import '@/assets/css/fonts.css';
+
 
 // import './assets/style.css';
 

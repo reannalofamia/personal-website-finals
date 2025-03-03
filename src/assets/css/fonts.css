@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'Recoleta Alt Black';
+    src: url('/fonts/Recoleta Alt Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Recoleta Alt Semibold';
+    src: url('/fonts/Recoleta Alt SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeueMedium';
+    src: url('/fonts/HelveticaNeueMedium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeueHeavy';
+    src: url('/fonts/HelveticaNeueHeavy.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeueBold';
+    src: url('/fonts/HelveticaNeueBold.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeueRoman';
+    src: url('/fonts/HelveticaNeueRoman.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'HelveticaNeueLight';
+    src: url('/fonts/HelveticaNeueLight.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Miller Display Bold';
+    src: url('/fonts/Miller_Display_Bold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Miller Display Roman';
+    src: url('/fonts/Miller_Display_Roman.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+  }
+  
