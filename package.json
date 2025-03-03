@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
@@ -30,7 +30,6 @@
     "eslint-plugin-oxlint": "^0.15.10",
     "eslint-plugin-vue": "^9.32.0",
     "jiti": "^2.4.2",
-    "npm-run-all2": "^7.0.2",
     "oxlint": "^0.15.10",
     "prettier": "^3.5.1",
     "typescript": "~5.7.3",
