@@ -36,18 +36,21 @@
       <br>
       <br>
       
-      <div class="video-container">
-        <h2 class="credits">Special Credits</h2>
-        <video 
-          ref="videoPlayer"
-          class="video"
-          @mouseover="playVideo"
-          @mouseleave="pauseVideo"
-          muted
-        >
-          <source src="https://res.cloudinary.com/dttx2z5da/video/upload/v1741184472/3663648637773553358_f4wge0.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
+      <!-- Video Section (Now Fully Below Resources, Above Footer) -->
+      <div class="video-wrapper">
+        <div class="video-container">
+          <h2 class="credits">Special Credits</h2>
+          <video 
+            ref="videoPlayer"
+            class="video"
+            @mouseover="playVideo"
+            @mouseleave="pauseVideo"
+            muted
+          >
+            <source src="https://res.cloudinary.com/dttx2z5da/video/upload/v1741184472/3663648637773553358_f4wge0.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </div>
   </div>
@@ -206,7 +209,7 @@ a:hover {
   width: 100%; /* Ensures it matches the page width properly */
   position: relative;
   left: 0;
-  font-family: 'HelveticaNeueMedium';
+  font-family: 'Recoleta Alt SemiBold';
 }
 
 .footer hr {
@@ -246,27 +249,32 @@ a:hover {
 }
 
 /*video*/
-.video-container {
+.resources-container {
+  margin-bottom: 50px; /* Adds space below resources */
+}
+
+.video-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
-  background-color: #f8f9fa;
+  margin-bottom: 50px; /* Adds space between video and footer */
+}
+
+.video-container {
+  text-align: center;
 }
 
 .credits {
-  font-family: 'HelveticaNeueMedium'; /* Regular font */
+  font-family: 'Recoleta Alt SemiBold';
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #333;
+  color: #000000;
 }
 
 .video {
-  width: 480px; 
-  height: auto;
-  max-width: 100%;
+  width: 100%; /* Makes it responsive */
+  max-width: 280px; /* Prevents it from being too large */
+  height: auto; /* Keeps aspect ratio */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
