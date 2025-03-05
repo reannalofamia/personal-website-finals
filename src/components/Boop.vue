@@ -20,14 +20,14 @@
       return {
         angle: 0,
         images: [
-          "https://picsum.photos/id/478/300/200",
-          "https://picsum.photos/id/370/300/200",
-          "https://picsum.photos/id/239/300/200",
-          "https://picsum.photos/id/59/300/200",
-          "https://picsum.photos/id/163/300/200",
-          "https://picsum.photos/id/69/300/200",
-          "https://picsum.photos/id/153/300/200",
-          "https://picsum.photos/id/20/300/200",
+          "https://res.cloudinary.com/dttx2z5da/image/upload/v1741173878/1_pusvko.png",
+          "https://res.cloudinary.com/dttx2z5da/image/upload/v1741173877/2_kwocmb.png",
+          "https://res.cloudinary.com/dttx2z5da/image/upload/v1741173877/3_awhk85.png",
+          "https://res.cloudinary.com/dttx2z5da/image/upload/v1741173877/4_ctvbep.png",
+          "https://res.cloudinary.com/dttx2z5da/image/upload/v1741173877/4_ctvbep.png",
+          "https://res.cloudinary.com/dttx2z5da/image/upload/v1741173877/6_gfrgem.png",
+          "https://res.cloudinary.com/dttx2z5da/image/upload/v1741173877/7_u4zc0m.png",
+          "https://res.cloudinary.com/dttx2z5da/image/upload/v1741173877/8_hebiwg.png",
         ],
       };
     },
