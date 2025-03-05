@@ -7,6 +7,8 @@ import Gallery from './components/Gallery.vue';
 // import sitepet from './components/sitepet.vue';
 import Boop from './components/Boop.vue';
 import Resources from './components/Resources.vue';
+import Video from './components/Video.vue';
+
 
 // Import global CSS
 import './assets/styles.css';
@@ -119,6 +121,11 @@ import { supabase } from './js/supabase.js';
     <!-- Resources Section -->
     <div id="resources">
       <Resources />
+    </div>
+
+    <!-- Video Section -->
+    <div id="video">
+      <Video />
     </div>
   </div>
 </template>
