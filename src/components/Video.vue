@@ -14,7 +14,13 @@
         </video>
       </div>
     </div>
-  </template>
+
+    <br>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 All rights reserved. Reanna Lofamia.</p>
+    </footer>
+</template>
   
   <script>
   import { ref, onMounted } from 'vue';
@@ -100,5 +106,28 @@
   .video:hover {
     transform: scale(1.05);
   }
+
+  .footer {
+  color: #000000;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  width: 100%; /* Ensures it matches the page width properly */
+  position: relative;
+  left: 0;
+  font-family: 'Recoleta Alt SemiBold';
+}
+
+.footer hr {
+  width: 80%;
+  border: none;
+  border-top: 2px solid #ffcc00;
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  margin: 0.3rem 0;
+}
   </style>
   
