@@ -28,11 +28,11 @@ import { ref, onMounted } from 'vue';
 
 const isVisible = ref(false);
 const images = ref([
-  'https://res.cloudinary.com/dttx2z5da/image/upload/v1740916833/f750a5d2-0b4c-43c9-9e78-17b56e3ee5eb_mz8s1t.jpg',
-  'https://res.cloudinary.com/dttx2z5da/image/upload/v1740916833/acd6ca34-ebb3-4051-be55-218cf2c70731_zfmrj8.jpg',
+  'https://res.cloudinary.com/dttx2z5da/image/upload/v1741187283/483187722_1195511245529753_3494034333011486218_n_si4a89.png',
+  'https://res.cloudinary.com/dttx2z5da/image/upload/v1741187067/482722857_525041506868979_2243923924956549639_n_hmtydo.jpg',
   'https://res.cloudinary.com/dttx2z5da/image/upload/v1740916834/71865489-728f-43d0-9fcd-384e3d1b1f87_nm6tfu.jpg',
   'https://res.cloudinary.com/dttx2z5da/image/upload/v1740916833/39980c1a-8097-47a8-a3fc-52fcb543ebf9_crnh60.jpg',
-  'https://res.cloudinary.com/dttx2z5da/image/upload/v1740916833/94c27d1c-1bb2-4c36-b6b4-85313095286a_xqmil0.jpg'
+  'https://res.cloudinary.com/dttx2z5da/image/upload/v1741187522/Snapinst.app_411733863_636288111892779_1336854786700826629_n_1080_vblz0y.jpg'
 ]);
 
 const handleScroll = () => {
