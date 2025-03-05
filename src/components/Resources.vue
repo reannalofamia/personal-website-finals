@@ -32,6 +32,23 @@
           </ul>
         </div>
       </div>
+
+      <br>
+      <br>
+      
+      <div class="video-container">
+        <h2 class="credits">Special Credits</h2>
+        <video 
+          ref="videoPlayer"
+          class="video"
+          @mouseover="playVideo"
+          @mouseleave="pauseVideo"
+          muted
+        >
+          <source src="https://res.cloudinary.com/dttx2z5da/video/upload/v1741184472/3663648637773553358_f4wge0.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
       <!-- Footer -->
@@ -60,6 +77,23 @@ onMounted(() => {
   window.addEventListener('scroll', handleScroll);
   handleScroll();
 });
+
+// Video Controls
+const videoPlayer = ref(null);
+
+const playVideo = () => {
+  if (videoPlayer.value) {
+    videoPlayer.value.play();
+    videoPlayer.value.muted = false;
+  }
+};
+
+const pauseVideo = () => {
+  if (videoPlayer.value) {
+    videoPlayer.value.pause();
+    videoPlayer.value.muted = true;
+  }
+};
 </script>
 
 <style scoped>
@@ -184,6 +218,62 @@ a:hover {
 
 .footer p {
   margin: 0.3rem 0;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.credits {
+  font-family: 'HelveticaNeueMedium'; /* Regular font */
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.video {
+  width: 480px; /* Adjusted for a normal web-friendly size */
+  height: auto; /* Keeps aspect ratio */
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*video*/
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.credits {
+  font-family: 'HelveticaNeueMedium'; /* Regular font */
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.video {
+  width: 480px; 
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.video:hover {
+  transform: scale(1.05);
 }
 
 </style>
